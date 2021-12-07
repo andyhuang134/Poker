@@ -1,4 +1,5 @@
-import deck_class
+
+from deck_class import Deck
 
 
 class User:
@@ -12,8 +13,17 @@ class User:
             self.player_hand.append(deck_class.draw_card())
 
     def show_hand(self):
+        print('-----------------')
+        print('Your Hand:')
         for cards in self.player_hand:
             cards.show()
+        self.show_balance()
+        print('-----------------')
+        print('optione')
+
+    def show_balance(self):
+        print(f'Balance: {self.balance}$')
+        return self.balance
 
     def fold(self):
         pass
